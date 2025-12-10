@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Strength Projections (measurments in KG)</title>
+</head>
+<body>
+    <h1>Concrete Strength Projections (measurments in KG)</h1>
+    <form action="/predict" method="POST">
+        <label for="Accept">Number of Applicants Accepted:</label>
+        <input type="text" name="Accept" required><br>
+        <label for="Enroll">Number of Students Currently Enrolled:</label>
+        <input type="text" name="Enroll" required><br>
+        <label for="F.Undergrad">Number of Fulltime Undergrads:</label>
+        <input type="text" name="F.Undergrad" required><br>
+        <button type="submit">Predict</button>
+    </form>
+
+<!--'Accept','Enroll','F.Undergrad'-->
+
+    {% if prediction_test %}
+        <h2>{{ prediction_test }}</h2>
+    {% endif %}
+</body>
+</html>
